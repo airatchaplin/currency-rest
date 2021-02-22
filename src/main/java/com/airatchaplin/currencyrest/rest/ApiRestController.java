@@ -1,8 +1,8 @@
-package com.airatchaplin.currentrest.rest;
+package com.airatchaplin.currencyrest.rest;
 
-import com.airatchaplin.currentrest.model.Currency;
-import com.airatchaplin.currentrest.service.ServiceCurrency;
-import com.airatchaplin.currentrest.service.ServiceFeignClientGif;
+import com.airatchaplin.currencyrest.model.Currency;
+import com.airatchaplin.currencyrest.service.ServiceCurrency;
+import com.airatchaplin.currencyrest.service.ServiceFeignClientGif;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;

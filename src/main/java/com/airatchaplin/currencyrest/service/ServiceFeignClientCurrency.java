@@ -1,6 +1,6 @@
-package com.airatchaplin.currentrest.service;
+package com.airatchaplin.currencyrest.service;
 
-import com.airatchaplin.currentrest.model.Currency;
+import com.airatchaplin.currencyrest.model.Currency;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

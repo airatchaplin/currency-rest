@@ -1,6 +1,6 @@
-package com.airatchaplin.currentrest.service;
+package com.airatchaplin.currencyrest.service;
 
-import com.airatchaplin.currentrest.model.Currency;
+import com.airatchaplin.currencyrest.model.Currency;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

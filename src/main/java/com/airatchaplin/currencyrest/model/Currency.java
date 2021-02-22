@@ -1,4 +1,4 @@
-package com.airatchaplin.currentrest.model;
+package com.airatchaplin.currencyrest.model;
 
 import lombok.Data;
 import java.util.Map;
