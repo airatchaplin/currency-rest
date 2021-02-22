@@ -41,5 +41,4 @@ public class ApiRestController {
         return gif;
     }
 
-
 }

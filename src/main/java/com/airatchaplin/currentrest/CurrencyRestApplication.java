@@ -8,10 +8,10 @@ import org.springframework.context.annotation.PropertySource;
 @SpringBootApplication
 @EnableFeignClients
 @PropertySource("classpath:currency.properties")
-public class CurrentRestApplication {
+public class CurrencyRestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CurrentRestApplication.class, args);
+        SpringApplication.run(CurrencyRestApplication.class, args);
     }
 
 }

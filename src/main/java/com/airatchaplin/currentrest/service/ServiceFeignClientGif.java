@@ -9,8 +9,8 @@ public interface ServiceFeignClientGif {
 
 
     @GetMapping("/random?api_key=UTmTgZMAXbT330ZhvwLrTkq1ww1Huk53&tag=rich")
-    public Map<String, Object> getGifRich();
+    Map<String, Object> getGifRich();
 
     @GetMapping("/random?api_key=UTmTgZMAXbT330ZhvwLrTkq1ww1Huk53&tag=broke")
-    public Map<String, Object> getGifBroke();
+    Map<String, Object> getGifBroke();
 }
