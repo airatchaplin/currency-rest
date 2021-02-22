@@ -8,6 +8,6 @@ public class Currency {
 
     String base;
     Map<String,Double> rates;
-    String data;
+    String date;
 
 }
