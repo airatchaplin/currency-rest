@@ -1,7 +1,7 @@
 package com.airatchaplin.currentrest.rest;
 
 import com.airatchaplin.currentrest.model.Currency;
-import com.airatchaplin.currentrest.service.ServiceCurrent;
+import com.airatchaplin.currentrest.service.ServiceCurrency;
 import com.airatchaplin.currentrest.service.ServiceFeignClientGif;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,7 +14,7 @@ import java.util.Map;
 public class ApiRestController {
 
     @Autowired
-    ServiceCurrent serviceCurrent;
+    ServiceCurrency serviceCurrent;
 
     @Autowired
     ServiceFeignClientGif serviceFeignClientGif;

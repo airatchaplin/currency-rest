@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.time.LocalDate;
 
 @Service
-public class ServiceCurrent {
+public class ServiceCurrency {
 
     @Autowired
     ServiceFeignClientCurrency serviceFeignClientCurrency;
