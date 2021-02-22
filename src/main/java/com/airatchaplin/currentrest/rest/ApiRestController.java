@@ -1,7 +1,7 @@
 package com.airatchaplin.currentrest.rest;
 
 import com.airatchaplin.currentrest.model.Currency;
-import com.airatchaplin.currentrest.service.ServiceFeignClientCurrencyImpl;
+import com.airatchaplin.currentrest.service.ServiceCurrent;
 import com.airatchaplin.currentrest.service.ServiceFeignClientGif;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,7 +14,7 @@ import java.util.Map;
 public class ApiRestController {
 
     @Autowired
-    ServiceFeignClientCurrencyImpl serviceFeignClientCurrency;
+    ServiceCurrent serviceCurrent;
 
     @Autowired
     ServiceFeignClientGif serviceFeignClientGif;
@@ -26,9 +26,9 @@ public class ApiRestController {
     String data;
 
     @GetMapping("/")
-    public Object getModel(){
-        Currency currencyToday = serviceFeignClientCurrency.getToday(data, currency);
-        Currency currencyAnyDay = serviceFeignClientCurrency.getYesterday(data, currency);
+    public Object getResponseAtGif(){
+        Currency currencyToday = serviceCurrent.getToday(currency);
+        Currency currencyAnyDay = serviceCurrent.getAnyDay(data, currency);
 
         Map<String,Double> mapAnyDay = currencyAnyDay.getRates();
         Map<String,Double> mapToday = currencyToday.getRates();

@@ -12,7 +12,7 @@ public interface ServiceFeignClientCurrency {
 
 
     @GetMapping("/historical/{data}.json?app_id=d475716c83694807b148e1bc9c3e337c&symbols={currency}" )
-    public Currency getYesterday(@PathVariable("data") String data, @PathVariable("currency") String currency);
+    public Currency getAnyDay(@PathVariable("data") String data, @PathVariable("currency") String currency);
 
     @GetMapping("/historical/{data}.json?app_id=d475716c83694807b148e1bc9c3e337c&symbols={currency}" )
     public Currency getToday(@PathVariable("data") String data,@PathVariable("currency") String currency);
