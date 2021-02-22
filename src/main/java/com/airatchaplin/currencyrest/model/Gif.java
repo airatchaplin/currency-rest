@@ -9,4 +9,5 @@ public class Gif {
     String username;
     String title;
     String url;
+    String tag;
 }

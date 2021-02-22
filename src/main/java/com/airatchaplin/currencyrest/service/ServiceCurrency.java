@@ -11,15 +11,15 @@ public class ServiceCurrency {
     @Autowired
     ServiceFeignClientCurrency serviceFeignClientCurrency;
 
-    public Currency getToday(String app_id, String currency) {
+    public Currency getToday(String app_id, String symbols) {
         String date = String.valueOf(LocalDate.now());
-        Currency currencyToday = serviceFeignClientCurrency.getToday(date, app_id, currency);
+        Currency currencyToday = serviceFeignClientCurrency.getToday(date, app_id, symbols);
         currencyToday.setDate(date);
         return currencyToday;
     }
 
-    public Currency getAnyDay(String date, String app_id, String currency) {
-        Currency currencyAnyDay = serviceFeignClientCurrency.getAnyDay(date, app_id, currency);
+    public Currency getAnyDay(String date, String app_id, String symbols) {
+        Currency currencyAnyDay = serviceFeignClientCurrency.getAnyDay(date, app_id, symbols);
         currencyAnyDay.setDate(date);
         return currencyAnyDay;
     }

@@ -6,7 +6,6 @@ import com.airatchaplin.currencyrest.service.ServiceCurrency;
 import com.airatchaplin.currencyrest.service.ServiceGif;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.Map;
@@ -32,20 +31,30 @@ public class ApiRestController {
     @Value("${api_key}")
     String api_key;
 
+    @Value("${tag_rich}")
+    String tag_rich;
+
+    @Value("${tag_broke}")
+    String tag_broke;
+
     @GetMapping("/")
-    public Gif getResponseAtGif() {
+    public Gif getResponseAtGif(Currency currencyToday,Currency currencyAnyDay) {
 
-        Currency currencyToday = serviceCurrent.getToday(app_id, symbol);
-        Currency currencyAnyDay = serviceCurrent.getAnyDay(date, app_id, symbol);
-
+        if (currencyAnyDay.getRates() == null && currencyToday.getRates() == null) {
+            currencyToday = serviceCurrent.getToday(app_id, symbol);
+            currencyAnyDay = serviceCurrent.getAnyDay(date, app_id, symbol);
+        }
         Map<String, Double> mapAnyDay = currencyAnyDay.getRates();
         Map<String, Double> mapToday = currencyToday.getRates();
 
         Gif gif;
         if (mapToday.get(symbol) > mapAnyDay.get(symbol)) {
-            gif = serviceGif.getGif(api_key, new AnnotationConfigApplicationContext().getEnvironment().getProperty("tag_rich"));
+            gif = serviceGif.getGif(api_key, tag_rich);
+            gif.setTag(tag_rich);
         } else {
-            gif = serviceGif.getGif(api_key, new AnnotationConfigApplicationContext().getEnvironment().getProperty("tag_broke"));
+            gif = serviceGif.getGif(api_key, tag_broke);
+            gif.setTag(tag_broke);
+
         }
         return gif;
     }
