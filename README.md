@@ -6,12 +6,19 @@ Cервис, который обращается к сервису курсов 
 3. Ответ приходит в json формате 
    
    Пример вывода :
+   
       {
+      
         "id":"TtU4bfUEF4BRpKZqrf",
+        
         "username":"BPONG",
+        
         "title":"Beer Pong Money GIF by BPONGofficial",
+        
         "url":"https://media3.giphy.com/media/TtU4bfUEF4BRpKZqrf/giphy.gif?cid=bd680e4de9d480cbb38b44ddf40d69158bf927507a35648a&rid=giphy.gif",
+        
         "tag":"rich"
+        
       } 
       
  Если хотите сравнить с другой датой и валютой, переходим в файл currency.properties и меняем значения: date в формате (гггг-мм-дд) и symbols в формате (RUB)
