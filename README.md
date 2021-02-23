@@ -17,7 +17,7 @@ Cервис, который обращается к сервису курсов 
         
         "url":"https://media3.giphy.com/media/TtU4bfUEF4BRpKZqrf/giphy.gif?cid=bd680e4de9d480cbb38b44ddf40d69158bf927507a35648a&rid=giphy.gif",
         
-        "tag":"rich"
+        "tag":"rich"  
         
       } 
       
