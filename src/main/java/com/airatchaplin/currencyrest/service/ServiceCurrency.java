@@ -12,16 +12,11 @@ public class ServiceCurrency {
     ServiceFeignClientCurrency serviceFeignClientCurrency;
 
     public Currency getToday(String app_id, String symbols) {
-        String date = String.valueOf(LocalDate.now());
-        Currency currencyToday = serviceFeignClientCurrency.getToday(date, app_id, symbols);
-        currencyToday.setDate(date);
-        return currencyToday;
+        return serviceFeignClientCurrency.getToday( app_id, symbols);
     }
 
     public Currency getAnyDay(String date, String app_id, String symbols) {
-        Currency currencyAnyDay = serviceFeignClientCurrency.getAnyDay(date, app_id, symbols);
-        currencyAnyDay.setDate(date);
-        return currencyAnyDay;
+        return serviceFeignClientCurrency.getAnyDay(date, app_id, symbols);
     }
 
 }

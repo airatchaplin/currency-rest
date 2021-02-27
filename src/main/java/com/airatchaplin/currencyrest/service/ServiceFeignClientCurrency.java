@@ -12,6 +12,6 @@ public interface ServiceFeignClientCurrency {
     @GetMapping("/historical/{date}.json")
     Currency getAnyDay(@PathVariable("date") String date, @RequestParam("app_id")String app_id,@RequestParam("symbols")String symbols);
 
-    @GetMapping("/historical/{date}.json")
-    Currency getToday(@PathVariable("date") String date, @RequestParam("app_id")String app_id,@RequestParam("symbols")String symbols);
+    @GetMapping("/latest.json")
+    Currency getToday( @RequestParam("app_id")String app_id,@RequestParam("symbols")String symbols);
 }

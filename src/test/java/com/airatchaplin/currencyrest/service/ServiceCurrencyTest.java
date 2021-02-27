@@ -18,8 +18,8 @@ class ServiceCurrencyTest {
 
     @Test
     void getToday() {
-        Currency currency = serviceFeignClientCurrency.getToday("","","");
-        Mockito.verify(serviceFeignClientCurrency,Mockito.times(1)).getToday("","","");
+        Currency currency = serviceFeignClientCurrency.getToday("","");
+        Mockito.verify(serviceFeignClientCurrency,Mockito.times(1)).getToday("","");
     }
 
     @Test
